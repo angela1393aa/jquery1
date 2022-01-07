@@ -37,11 +37,19 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      //index() 獲取當前節點在兄弟節點中的下標
-      alert($("h3").index()); //得到2，兄弟節點的下標(h2,p,h3)index[2]
-      //eq(下標) 通過下標獲取指定元素的元素節點
-      $("li").eq(3).css("backgroundColor", "red"); //4變紅色
-      $("li:eq(4)").css("backgroundColor", "blue"); //5變藍色
+      //attr 設置和修改行間屬性
+      alert($("#div1").attr("id")); //取值div1
+      alert($("#div1").attr("class")); //取值box
+      alert($("#div1").attr("title")); //取值hello
+      //設置屬性
+      // $("#div1").attr("title", "world");
+      // $("#div1").attr("class", "box2");
+      //設置屬性=>寫在一起
+      $("#div1").attr({
+        title: "world",
+        class: "box2",
+        yyy: "zzz",
+      });
     </script>
   </body>
 </html>
